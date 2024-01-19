@@ -46,10 +46,6 @@ def get(city_id, _id):
     max_retries = 5
     for i in range(max_retries):
         try:
-            print('HEADERS EPTA')
-            print(headers)
-            print('JSONDATA EPTA')
-            print(json_data)
             response = session.post(f'https://kaspi.kz/yml/offer-view/offers/{_id}', headers=headers, json=json_data)
             response.raise_for_status()  # will throw an exception for error codes
             break
