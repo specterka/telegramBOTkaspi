@@ -42,15 +42,14 @@ def get(city_id, _id):
         "page": 0
     }
 
+    temp_data = {"cityId":"511010000","id":"100051442","merchantUID":"","limit":5,"page":0,"sort":true,"product":{"brand":"DENZEL","categoryCodes":["Pipe welding machines","Welders","Welding equipment","Power tools","Construction and repair","Categories"],"baseProductCodes":[],"groups":null},"installationId":"-1"}
+
     session = requests.Session()
     max_retries = 5
     for i in range(max_retries):
         try:
-            xyiurl = 'https://www.w3schools.com/python/demopage.php'
-            xyimyobj = {'somekey': 'somevalue'}
-            yix = requests.post(xyiurl, json = xyimyobj)
-            print(yix.text)
-            response = session.post(f'https://kaspi.kz/yml/offer-view/offers/{_id}', headers=headers, json=json_data)
+            # response = session.post(f'https://kaspi.kz/yml/offer-view/offers/{_id}', headers=headers, json=json_data)
+            response = session.post(f'https://kaspi.kz/yml/offer-view/offers/{_id}', headers=headers, json=temp_data)
             response.raise_for_status()  # will throw an exception for error codes
             break
         except requests.exceptions.RequestException as e:
