@@ -16,21 +16,22 @@ CHOOSING, TYPING_REPLY = range(2)
 
 def get(city_id, _id):
     headers = {
-        'Accept': 'application/json, text/*',
-        'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8',
-        'Connection': 'keep-alive',
-        'Content-Type': 'application/json; charset=UTF-8',
-        'Cookie': 'k_stat=ca3bad98-45a4-4139-aea3-f838d613af72; ks.tg=52; ssaid=f46561e0-9cd7-11ed-bb4d-ad3d1adf37c8; _ga=GA1.2.1160662921.1674668686; _ym_uid=1674668688623779345; _ym_d=1674668688; ks.ngs.s=e633617833b29aed2e06a1bb5b0d3d82; _hjSessionUser_283363=eyJpZCI6IjI2NmRjZjllLTVjNmMtNThiZi04ZmQyLTcwY2IzOTExODIzMiIsImNyZWF0ZWQiOjE2NzQ2Njg2ODU1NzAsImV4aXN0aW5nIjp0cnVlfQ==; _hjIncludedInSessionSample=1; _hjSession_283363=eyJpZCI6IjE2ZmI4NzU0LWEzZTUtNDE2My1iYjgyLWYyZmZlMzczZGZhNyIsImNyZWF0ZWQiOjE2NzUzNzQyODUzNTcsImluU2FtcGxlIjp0cnVlfQ==; _hjAbsoluteSessionInProgress=0; _gid=GA1.2.86683657.1675374286; _ym_isad=1; _ym_visorc=b; _gat_ddl=1; googtrans=/auto/en; googtrans=/auto/en; ks.cc=-1; kaspi.storefront.cookie.city=750000000; __tld__=null',
-        'Origin': 'https://kaspi.kz',
-        'Referer': 'https://kaspi.kz/shop/p/bosch-pointteq-2-608-577-351-nabor-19-sht--22700866/?c=750000000',
-        'Sec-Fetch-Dest': 'empty',
-        'Sec-Fetch-Mode': 'cors',
-        'Sec-Fetch-Site': 'same-origin',
-        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36',
-        'sec-ch-ua': '"Not_A Brand";v="99", "Google Chrome";v="109", "Chromium";v="109"',
-        'sec-ch-ua-mobile': '?0',
-        'sec-ch-ua-platform': '"macOS"',
-    }
+  'Content-Type': 'application/json; charset=utf-8',
+  'Accept': 'application/json, text/*',
+  'Sec-Fetch-Site': 'same-origin',
+  'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8',
+  'Accept-Encoding': 'gzip, deflate, br',
+  'Sec-Fetch-Mode': 'cors',
+  'Host': 'kaspi.kz',
+  'Origin': 'https://kaspi.kz',
+  'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Safari/605.1.15',
+  'Referer': 'https://kaspi.kz/shop/p/pogruzhnoi-vitek-vt-8530-belyi-3101017/?c=710000000',
+  'Content-Length': '306',
+  'Connection': 'keep-alive',
+  'Cookie': 'NSC_ESNS=18407a77-6cdc-15aa-9678-e61af6284ef8_2335888630_3145963510_00000000030471045422; .AspNetCore.Culture=c%3Dru%7Cuic%3Dru; current-action-name=Index; _hjSessionUser_283363=eyJpZCI6IjI0ZDI5NDgwLWI3NjMtNTNjOS1hMDFmLWFhYzRlODQ2ZjNlZiIsImNyZWF0ZWQiOjE3MDEwMjAyNTk4NTMsImV4aXN0aW5nIjp0cnVlfQ==; amp_6e9c16=P4BbxAECuNs590l0yt5rbZ...1hiiv5ki9.1hiiv5ki9.1u7.0.1u7; kaspi.storefront.cookie.city=710000000; ks.tg=4; _ga=GA1.1.737106587.1689672698; _ga_VLBLXPJVTQ=GS1.1.1696746598.4.0.1696746598.60.0.0; _ym_d=1696746598; _ym_uid=1680780391920748145; test.user.group=67; test.user.group_exp=40; test.user.group_exp2=80; ks.cc=-1; k_stat=dee1dfa1-62ef-4840-afb0-e15689c06731; .AspNetCore.Culture=c%3Dru%7Cuic%3Dru',
+  'Sec-Fetch-Dest': 'empty',
+  'X-KS-City': '710000000'
+}
 
     json_data = {
         'cityId': city_id,
