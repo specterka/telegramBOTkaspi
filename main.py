@@ -36,10 +36,10 @@ def get(city_id, _id):
     }
 
     json_data = {
-        'cityId': city_id,
-        'id': _id,
-        'limit': 5,
-        'page': 0
+        "cityId": city_id,
+        "id": _id,
+        "limit": 5,
+        "page": 0
     }
 
     session = requests.Session()
