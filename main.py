@@ -48,7 +48,7 @@ def get(city_id, _id):
     max_retries = 5
     for i in range(max_retries):
         try:
-            response = session.post(f'https://kaspi.kz/yml/offer-view/offers/{_id}', headers=headers, json=payload)
+            response = session.post(f'https://kaspi.kz/yml/offer-view/offers/{_id}', headers=headers, json=json_data)
             response.raise_for_status()  # will throw an exception for error codes
             return response.json()
         except requests.exceptions.RequestException as e:
