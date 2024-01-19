@@ -42,7 +42,7 @@ def get(city_id, _id):
         "page": 0
     }
 
-    temp_data = {"cityId":"511010000","id":"100051442","merchantUID":"","limit":5,"page":0,"sort":true,"product":{"brand":"DENZEL","categoryCodes":["Pipe welding machines","Welders","Welding equipment","Power tools","Construction and repair","Categories"],"baseProductCodes":[],"groups":null},"installationId":"-1"}
+    temp_data = {"cityId":"511010000","id":"100051442","merchantUID":"","limit":5,"page":0,"sort":True,"product":{"brand":"DENZEL","categoryCodes":["Pipe welding machines","Welders","Welding equipment","Power tools","Construction and repair","Categories"],"baseProductCodes":[],"groups":null},"installationId":"-1"}
 
     session = requests.Session()
     max_retries = 5
