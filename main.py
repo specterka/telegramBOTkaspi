@@ -42,13 +42,13 @@ def get(city_id, _id):
         "page": 0
     }
 
-    temp_data = {"cityId":"511010000","id":"100051442","merchantUID":"","limit":5,"page":0,"sort":True,"product":{"brand":"DENZEL","categoryCodes":["Pipe welding machines","Welders","Welding equipment","Power tools","Construction and repair","Categories"],"baseProductCodes":[],"groups":None},"installationId":"-1"}
+    payload = "{\"cityId\":\"710000000\",\"id\":\"22700963\",\"limit\":5,\"page\":0}"
 
     session = requests.Session()
     max_retries = 5
     for i in range(max_retries):
         try:
-            response = session.post(f'https://kaspi.kz/yml/offer-view/offers/{_id}', headers=headers, json=json_data)
+            response = session.post(f'https://kaspi.kz/yml/offer-view/offers/{_id}', headers=headers, json=payload)
             response.raise_for_status()  # will throw an exception for error codes
             return response.json()
         except requests.exceptions.RequestException as e:
