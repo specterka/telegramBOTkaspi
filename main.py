@@ -18,22 +18,22 @@ CHOOSING, TYPING_REPLY = range(2)
 
 def get(city_id, _id):
     headers = {
-      'Content-Type': 'application/json; charset=utf-8',
-      'Accept': 'application/json, text/*',
-      'Sec-Fetch-Site': 'same-origin',
-      'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8',
-      'Accept-Encoding': 'gzip, deflate, br',
-      'Sec-Fetch-Mode': 'cors',
-      'Host': 'kaspi.kz',
-      'Origin': 'https://kaspi.kz',
-      'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Safari/605.1.15',
-      'Referer': 'https://kaspi.kz/shop/p/pogruzhnoi-vitek-vt-8530-belyi-3101017/?c=710000000',
-      'Content-Length': '306',
-      'Connection': 'keep-alive',
-      'Cookie': 'NSC_ESNS=18407a77-6cdc-15aa-9678-e61af6284ef8_2335888630_3145963510_00000000030471045422; .AspNetCore.Culture=c%3Dru%7Cuic%3Dru; current-action-name=Index; _hjSessionUser_283363=eyJpZCI6IjI0ZDI5NDgwLWI3NjMtNTNjOS1hMDFmLWFhYzRlODQ2ZjNlZiIsImNyZWF0ZWQiOjE3MDEwMjAyNTk4NTMsImV4aXN0aW5nIjp0cnVlfQ==; amp_6e9c16=P4BbxAECuNs590l0yt5rbZ...1hiiv5ki9.1hiiv5ki9.1u7.0.1u7; kaspi.storefront.cookie.city=710000000; ks.tg=4; _ga=GA1.1.737106587.1689672698; _ga_VLBLXPJVTQ=GS1.1.1696746598.4.0.1696746598.60.0.0; _ym_d=1696746598; _ym_uid=1680780391920748145; test.user.group=67; test.user.group_exp=40; test.user.group_exp2=80; ks.cc=-1; k_stat=dee1dfa1-62ef-4840-afb0-e15689c06731; .AspNetCore.Culture=c%3Dru%7Cuic%3Dru',
-      'Sec-Fetch-Dest': 'empty',
-      'X-KS-City': '710000000'
-    }
+  'Accept': 'application/json, text/*',
+  'Sec-Fetch-Site': 'same-origin',
+  'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8',
+  'Accept-Encoding': 'gzip, deflate, br',
+  'Sec-Fetch-Mode': 'cors',
+  'Host': 'kaspi.kz',
+  'Origin': 'https://kaspi.kz',
+  'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Safari/605.1.15',
+  'Referer': 'https://kaspi.kz/shop/p/nabor-avtomobil-nyi-125-predmetov-helpfer-hp-s125-22700963/?c=710000000',
+  'Content-Length': '281',
+  'Connection': 'keep-alive',
+  'Cookie': 'NSC_ESNS=4263b9e5-a253-15b3-9678-e61af6284ef8_0956502634_0163207088_00000000018293324193; ks.tg=18; .AspNetCore.Culture=c%3Dru%7Cuic%3Dru; X-Mc-Api-Session-Id=Y12-f8c55a97-1a5a-4428-933c-8a9e4e00b061; _hjSessionUser_283363=eyJpZCI6IjI0ZDI5NDgwLWI3NjMtNTNjOS1hMDFmLWFhYzRlODQ2ZjNlZiIsImNyZWF0ZWQiOjE3MDEwMjAyNTk4NTMsImV4aXN0aW5nIjp0cnVlfQ==; amp_6e9c16=P4BbxAECuNs590l0yt5rbZ...1hkqrjcn9.1hkqrjcn9.1u7.0.1u7; current-action-name=Index; kaspi.storefront.cookie.city=710000000; _ga=GA1.1.737106587.1689672698; _ga_VLBLXPJVTQ=GS1.1.1696746598.4.0.1696746598.60.0.0; _ym_d=1696746598; _ym_uid=1680780391920748145; test.user.group=67; test.user.group_exp=40; test.user.group_exp2=80; ks.cc=-1; k_stat=dee1dfa1-62ef-4840-afb0-e15689c06731',
+  'Sec-Fetch-Dest': 'empty',
+  'X-KS-City': '710000000',
+  'Content-Type': 'text/plain'
+}
 
     json_data = {
         "cityId": city_id,
@@ -50,7 +50,7 @@ def get(city_id, _id):
         try:
             print(headers)
             print(payload)
-            response = session.post(f'https://kaspi.kz/yml/offer-view/offers/{_id}', headers=headers, json=payload)
+            response = session.post(f'https://kaspi.kz/yml/offer-view/offers/{_id}', headers=headers, json=json_data)
             response.raise_for_status()  # will throw an exception for error codes
             return response.json()
         except requests.exceptions.RequestException as e:
